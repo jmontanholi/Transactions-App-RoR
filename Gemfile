@@ -7,6 +7,7 @@ gem 'cancancan'
 gem 'devise'
 gem 'dotenv-rails', groups: %i[development test]
 gem 'faker'
+gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'

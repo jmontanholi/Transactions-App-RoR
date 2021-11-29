@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
     @user = User.new(
       full_name: 'joao vitor montanholi',
       email: 'test@gmail.com.br',
-      password: 123456
+      password: 123_456
     )
   end
 
@@ -36,7 +36,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'Will not be valid without an apropriate password' do
-      @user.password = 12345
+      @user.password = 12_345
       expect(@user).to_not be_valid
     end
 

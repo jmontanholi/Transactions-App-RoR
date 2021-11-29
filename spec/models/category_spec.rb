@@ -5,7 +5,7 @@ RSpec.describe Category, type: :model do
     @user = User.create(
       full_name: 'joao vitor montanholi',
       email: 'test@gmail.com.br',
-      password: 123456
+      password: 123_456
     )
 
     @category = Category.new(
