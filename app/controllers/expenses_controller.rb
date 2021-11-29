@@ -1,2 +1,2 @@
-class ExpenseController < ActionController::Base
+class ExpensesController < ApplicationController
 end
