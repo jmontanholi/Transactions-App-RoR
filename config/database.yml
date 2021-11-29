@@ -23,13 +23,15 @@ default: &default
 
 development:
   <<: *default
-  database: Transactions_App_RoR_development
+  database: Transaction_App_RoR_development
+  username: <%= ENV['MY_USERNAME'] %>
+  password: <%= ENV['MY_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: Transactions_App_RoR
+  #username: Transaction_App_RoR
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,8 +59,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Transactions_App_RoR_test
-
+  database: Transaction_App_RoR_test
+  username: <%= ENV['MY_USERNAME'] %> 
+  password: <%= ENV['MY_PASSWORD'] %>
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -81,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: Transactions_App_RoR_production
-  username: Transactions_App_RoR
-  password: <%= ENV['TRANSACTIONS_APP_ROR_DATABASE_PASSWORD'] %>
+  database: Transaction_App_RoR_production
+  username: Transaction_App_RoR
+  password: <%= ENV['TRANSACTION_APP_ROR_DATABASE_PASSWORD'] %>
