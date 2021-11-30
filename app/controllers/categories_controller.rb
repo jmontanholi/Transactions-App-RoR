@@ -3,6 +3,10 @@ class CategoriesController < ApplicationController
     @categories = current_user.categories.includes(:expenses)
   end
 
+  def show
+    @category = Category.find(params[:id])
+  end
+
   def new
     @errors = params[:errors]
   end

@@ -1,0 +1,76 @@
+$font_logo: 'Caveat', cursive;
+$font_text: 'Outfit', sans-serif;
+$blue_color: #3778c2;
+$green_color: #5fb523;
+$grey_color: #434b54;
+
+.categories_section {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.categories_major_div {
+  display: flex;
+  flex-direction: column;
+  max-height: 60%;
+  a {
+    text-decoration: none;
+    font-family: $font_text;
+    color: rgb(177, 177, 177);
+    font-weight: bold;
+    transition: all 0.4s;
+    .total {
+      color: black;
+    }
+  }
+  a:hover {
+    transform: scale(1.02);
+  }
+}
+
+.categories_small_div {
+  display: flex;
+  margin: 0.5rem;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 5rem;
+  img {
+    height: 80%;
+    width: 20%;
+  }
+}
+
+.new_category_div {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $green_color;
+  height: 15vh;
+  width: 100%;
+  a {
+    color: white;
+    text-decoration: none;
+    font-family: $font_text;
+    border: 3px solid white;
+    border-radius: 5px;
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: $green_color;
+    transition: all 0.4s;
+  }
+
+  a:hover {
+    background-color: #73d42d;
+    box-shadow: 1px 1px 1px white;
+    transform: scale(1.05);
+  }
+}
