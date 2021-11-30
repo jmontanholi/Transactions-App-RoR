@@ -3,6 +3,7 @@
 # Rails Capstone - Transaction App - KeepTrack
 
 > This app goal is to let it's user keep track of its transactions.
+# [Video Presentation Link](https://www.loom.com/share/80463a04aca04dc9910bfef8dd73eaf6)
 
 ![screenshot](./app_screenshot.png)
 ## Built With
