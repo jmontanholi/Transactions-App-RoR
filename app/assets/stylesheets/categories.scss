@@ -74,3 +74,55 @@ $grey_color: #434b54;
     transform: scale(1.05);
   }
 }
+
+.category_total_div {
+  background-color: white;
+  border-bottom: 1px solid rgb(194, 194, 194);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-family: $font_text;
+  color: $grey_color;
+  h3 {
+    margin: 0 0 0 1rem;
+  }
+  p {
+    color: black;
+    font-weight: bold;
+    margin: 0 1rem 0 0;
+  }
+}
+
+.expense_div {
+  position: relative;
+  display: flex;
+  margin: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 5rem;
+  color: $grey_color;
+  font-family: $font_text;
+  font-weight: bold;
+  img {
+    height: 80%;
+    width: 20%;
+  }
+  .name {
+    margin: 0 0 2rem 1rem;
+    font-size: 1.5rem;
+  }
+  .time {
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    margin: 0;
+    color: rgb(185, 185, 185);
+  }
+  .amount {
+    color: black;
+    margin-right: 1rem;
+  }
+}

@@ -5,7 +5,7 @@
   <h2 class='header_title'>LOGIN</h2>
   <h3 class='header_title'>Proceed</h3>
 </header>
-
+<%= render 'layouts/flash'%>
 <div class='form_div'>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
