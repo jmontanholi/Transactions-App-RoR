@@ -17,5 +17,10 @@
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0",
     "webpack-dev-server": "3"
+  },
+  "scripts": {
+    "heroku-prebuild": "npm install",
+    "start": "serve -s build",
+    "heroku-postbuild": "npm run build"
   }
 }
