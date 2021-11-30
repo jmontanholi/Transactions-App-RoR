@@ -40,9 +40,32 @@ header {
   }
   input:focus {
     outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
   }
   input::placeholder {
     color: rgb(214, 214, 214);
   }
 }
 
+.remember {
+  margin: auto;
+  width: 75%;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input {
+    width: 20px;
+    margin-right: 1rem;
+  }
+}
+
+.forget_div {
+  text-align: center;
+  margin-top: 1rem;
+  a {
+    color: rgb(172, 172, 172);
+    text-decoration: none;
+  }
+}
