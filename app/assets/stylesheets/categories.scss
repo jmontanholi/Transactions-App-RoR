@@ -33,7 +33,7 @@ $grey_color: #434b54;
 .categories_small_div {
   display: flex;
   margin: 0.5rem;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid grey;
   border-radius: 5px;
@@ -41,6 +41,10 @@ $grey_color: #434b54;
   img {
     height: 80%;
     width: 20%;
+    margin-left: 1rem;
+  }
+  .total {
+    margin-right: 1rem;
   }
 }
 

@@ -1,6 +1,7 @@
 class ExpensesController < ApplicationController
   def new
     @errors = params[:errors]
+    @category = Category.find(params[:category_id])
   end
 
   def create
@@ -12,7 +13,7 @@ class ExpensesController < ApplicationController
         @expense.categories << category
       end
       flash[:notice] = 'Expense created successfully'
-      redirect_to '/user'
+      redirect_to "/categories/#{params[:category_id]}"
     else
       flash[:notice] = 'Something is wrong, please look at the errors'
       @errors = @category.errors.full_messages

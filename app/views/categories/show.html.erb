@@ -22,7 +22,7 @@
   <% end %>
 </section>
 <div class='new_category_div'>
-  <%= link_to '/expenses/new' do %>
+  <%= link_to expenses_new_path(category_id: @category.id) do %>
     <p>NEW EXPENSE</p>
   <% end %>
 </div>

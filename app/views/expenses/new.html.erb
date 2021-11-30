@@ -15,6 +15,7 @@
 <% end %>
 <div class='form_div'>
   <%= form_with url: '/expenses/create', method: :post do |form|%>
+    <%= form.hidden_field :category_id, value: @category.id %>
     <div>
       <%= form.text_field :name, placeholder: 'Expense Name' %>
     </div>
