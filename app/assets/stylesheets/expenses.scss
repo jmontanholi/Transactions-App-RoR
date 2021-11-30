@@ -17,3 +17,41 @@ $grey_color: #434b54;
   }
   margin-bottom: 1rem;
 }
+
+.expense_div {
+  position: relative;
+  display: flex;
+  margin: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 5rem;
+  color: $grey_color;
+  font-family: $font_text;
+  font-weight: bold;
+  img {
+    height: 80%;
+    width: 20%;
+  }
+  .name {
+    margin: 0 0 2rem 1rem;
+    font-size: 1.5rem;
+  }
+  .time {
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    margin: 0;
+    color: rgb(185, 185, 185);
+  }
+  .amount {
+    color: black;
+    margin-right: 1rem;
+  }
+}
+
+.expenses_section {
+  max-height: 66vh;
+  overflow-y: auto;
+}

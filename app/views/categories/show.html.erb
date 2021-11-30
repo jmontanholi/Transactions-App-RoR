@@ -12,7 +12,7 @@
     <p>Total: <span>$<%= @category.total %></span></p>
   </div>
 </section>
-<section>
+<section class='expenses_section'>
   <% @expenses.each do |expense| %>
     <div class='expense_div'>
       <p class='name'><%= expense.name.capitalize %></p>
