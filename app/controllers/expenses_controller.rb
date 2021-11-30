@@ -2,9 +2,7 @@ class ExpensesController < ApplicationController
   load_and_authorize_resource
 
   def new
-    if params[:errors]
-      @errors = params[:errors]
-    end
+    @errors = params[:errors] if params[:errors]
     @category = Category.find(params[:category_id])
   end
 
