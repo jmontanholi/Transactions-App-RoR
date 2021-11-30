@@ -1,11 +1,11 @@
-$font_header: 'Caveat', cursive;
+$font_logo: 'Caveat', cursive;
 $font_text: 'Outfit', sans-serif;
 $blue_color: #3778c2;
 $green_color: #5fb523;
 $grey_color: #434b54;
 
 .logo {
-  font-family: 'Caveat', cursive;
+  font-family: $font_logo;
   font-size: 3rem;
 }
 

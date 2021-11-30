@@ -9,11 +9,12 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Outfit:wght@100;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fd0eaf46fd.js" crossorigin="anonymous"></script>
   </head>
 
   <body class="body">
     <% flash.each do |type, msg| %>
-      <div>
+      <div class= 'flash'>
         <%= msg %>
       </div>
     <% end %>
