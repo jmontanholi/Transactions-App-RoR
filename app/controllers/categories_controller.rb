@@ -24,4 +24,10 @@ class CategoriesController < ApplicationController
       redirect_to categories_new_path(errors: @errors)
     end
   end
+
+  private
+
+  def category_params
+    params.require(:category).permit(:name, :icon)
+  end
 end

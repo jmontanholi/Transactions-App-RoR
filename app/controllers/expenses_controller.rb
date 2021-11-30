@@ -20,4 +20,10 @@ class ExpensesController < ApplicationController
       redirect_to expenses_new_path(errors: @errors)
     end
   end
+
+  private 
+
+  def expense_parameters
+    params.require(:expense).permit(:name, :amount)
+  end
 end
