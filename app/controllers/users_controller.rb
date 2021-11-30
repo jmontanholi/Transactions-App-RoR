@@ -1,4 +1,4 @@
 class UsersController < ApplicationController
-  def home_page
+  def splash_page
   end
 end

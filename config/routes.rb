@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#home_page'
+  root 'users#splash_page'
   devise_for :users
 
   get '/home_page', to: 'users#home_page'

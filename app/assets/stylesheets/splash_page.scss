@@ -1,0 +1,72 @@
+$font_header: 'Caveat', cursive;
+$font_text: 'Outfit', sans-serif;
+$blue_color: #3778c2;
+$green_color: #5fb523;
+$grey_color: #434b54;
+
+.logo {
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+}
+
+.home_page_major_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.home_page_logo {
+  margin-top: 5rem;
+}
+
+.home_page_links {
+  display: flex;
+  flex: 0.02;
+  flex-direction: column;
+  a {
+    button {
+      width: 50vh;
+      height: 3.5rem;
+      font-weight: bold;
+      font-family: $font_text;
+      border-radius: 5px;
+      transition: all 1s;
+    }
+  }
+}
+
+.login {
+  color: white;
+  background-color: $blue_color;
+  border: none;
+}
+
+.login:hover {
+  color: black;
+  box-shadow: 2px 2px 6px black;
+  transform: scale(1.1) translateY(-10px);
+  z-index: 10;
+}
+
+.login:active {
+  box-shadow: inset 1px 1px 2px black;
+}
+
+.signup {
+  color: $grey_color;
+  background-color: white;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+.signup:hover {
+  color: black;
+  box-shadow: 1px 1px 6px black;
+  transform: scale(1.1) translateY(10px);
+  z-index: 10;
+}
+
+.signup:active {
+  box-shadow: inset 1px 1px 2px black;
+}
