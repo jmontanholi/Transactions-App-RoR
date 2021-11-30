@@ -1,24 +1,79 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rails Capstone - Transaction App - KeepTrack
 
-Things you may want to cover:
+> This app goal is to let it's user keep track of its transactions.
 
-* Ruby version
+![screenshot](./app_screenshot.png)
+## Built With
 
-* System dependencies
+- Ruby
+- Ruby on Rails
+- VScode
+- Git & GitHub
+- PostgreSQL
+- Rspec
+- Capybara
 
-* Configuration
+## Live Demo
 
-* Database creation
+[Live Demo Link](https://livedemo.com)
 
-* Database initialization
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running follow these simple example steps.
 
-* Deployment instructions
+### Prerequisites
 
-* ...
+- Ruby
+- Rails
+- Git and GitHub
+- Command Line
+- Browser
+### Setup
+
+- In your commandline choose where you want to clone this repository into.
+- Run the following command: `git clone https://github.com/jmontanholi/Transactions-App-RoR.git`
+### Install
+
+- Setup a .env file with your database variables if needed. Check /config/database.yml for more info.
+- Run these commands in order:
+- `bundle install`
+- `rails db:create`
+- `rails db:migrate`
+
+### Usage
+
+- Simply run `rails server`
+### Run tests
+
+- Run one of the following commands:
+- `rails test`
+- `bundle exec rspec`
+- `rspec` 
+## Authors
+
+👤 **João Vítor Montanholi Nunes**
+
+- GitHub: [jmontanholi](https://github.com/jmontanholi)
+- Twitter: [MontanholiNunes](https://twitter.com/MontanholiNunes)
+- LinkedIn: [Joao vitor montanholi](https://www.linkedin.com/in/joaovitormontanholi/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Original designer](https://www.behance.net/gregoirevella)
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
