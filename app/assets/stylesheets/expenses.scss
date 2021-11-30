@@ -11,10 +11,12 @@ $grey_color: #434b54;
   align-items: center;
   font-family: $font_text;
   font-weight: bold;
+
   input {
     display: flex;
     width: 1.5rem;
   }
+
   margin-bottom: 1rem;
 }
 
@@ -30,14 +32,17 @@ $grey_color: #434b54;
   color: $grey_color;
   font-family: $font_text;
   font-weight: bold;
+
   img {
     height: 80%;
     width: 20%;
   }
+
   .name {
     margin: 0 0 1.2rem 1rem;
     font-size: 1.5rem;
   }
+
   .time {
     position: absolute;
     bottom: 0;
@@ -45,6 +50,7 @@ $grey_color: #434b54;
     margin: 0;
     color: rgb(185, 185, 185);
   }
+
   .amount {
     color: black;
     margin-right: 1rem;

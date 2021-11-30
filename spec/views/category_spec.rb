@@ -6,7 +6,7 @@ RSpec.describe 'Category Pages', type: :feature do
       user = User.create(
         full_name: 'Joao Vitor Montanholi',
         email: 'test2@gmail.com',
-        password: 123456
+        password: 123_456
       )
       user.categories.create(
         name: 'Food',
@@ -17,7 +17,7 @@ RSpec.describe 'Category Pages', type: :feature do
     before(:each) do
       visit new_user_session_path
       fill_in 'Email', with: 'test2@gmail.com'
-      fill_in 'Password', with: 123456
+      fill_in 'Password', with: 123_456
       click_button 'Log in'
     end
 

@@ -1,6 +1,6 @@
 class ExpensesController < ApplicationController
   load_and_authorize_resource
-  
+
   def new
     @errors = params[:errors]
     @category = Category.find(params[:category_id])
@@ -23,7 +23,7 @@ class ExpensesController < ApplicationController
     end
   end
 
-  private 
+  private
 
   def expense_parameters
     params.require(:expense).permit(:name, :amount)
