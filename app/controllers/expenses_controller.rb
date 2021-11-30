@@ -20,8 +20,8 @@ class ExpensesController < ApplicationController
       redirect_to "/categories/#{params[:category_id]}"
     else
       flash[:notice] = 'Something is wrong, please look at the errors'
-      @errors = @category.errors.full_messages
-      redirect_to expenses_new_path(errors: @errors)
+      @errors = @expense.errors.full_messages
+      redirect_to expenses_new_path(errors: @errors, category_id: params[:category_id])
     end
   end
 
