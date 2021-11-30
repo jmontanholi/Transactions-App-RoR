@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  load_and_authorize_resource
+  
   def index
     @categories = current_user.categories.includes(:expenses)
   end
@@ -28,6 +30,6 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:name, :icon)
+    params.permit(:name, :icon)
   end
 end

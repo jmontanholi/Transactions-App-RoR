@@ -1,39 +1,41 @@
-<header>
-  <%= link_to '/user' do %>
-    <i class="fas fa-arrow-left"></i>
+<% if can? :create, Expense %>
+  <header>
+    <%= link_to '/user' do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+    <h2 class='header_title'>CREATE EXPENSE</h2>
+    <i class="fas fa-search"></i>
+  </header>
+  <%= render 'layouts/flash'%>
+  <% if @errors %>
+    <div class='errors'>
+      <% @errors.each do |e|%>
+          <p><%= e %></p>
+      <% end %>
+    </div>
   <% end %>
-  <h2 class='header_title'>CREATE EXPENSE</h2>
-  <i class="fas fa-search"></i>
-</header>
-<%= render 'layouts/flash'%>
-<% if @errors %>
-  <div class='errors'>
-    <% @errors.each do |e|%>
-        <p><%= e %></p>
+  <div class='form_div'>
+    <%= form_with url: '/expenses/create', method: :post do |form|%>
+      <%= form.hidden_field :category_id, value: @category.id %>
+      <div>
+        <%= form.text_field :name, placeholder: 'Expense Name' %>
+      </div>
+
+      <div>
+        <%= form.number_field :amount, placeholder: 'Expense Amount' %>
+      </div>
+
+      <div class='check_boxes'>
+        <%= form.collection_check_boxes :categories, 
+            current_user.categories.order(:created_at), :id, :name,
+            include_hidden: false,
+            placeholder: 'Expense Categories' 
+        %>
+      </div>
+
+      <div>
+        <%= form.submit 'Create', class: 'login' %>
+      </div>
     <% end %>
   </div>
 <% end %>
-<div class='form_div'>
-  <%= form_with url: '/expenses/create', method: :post do |form|%>
-    <%= form.hidden_field :category_id, value: @category.id %>
-    <div>
-      <%= form.text_field :name, placeholder: 'Expense Name' %>
-    </div>
-
-    <div>
-      <%= form.number_field :amount, placeholder: 'Expense Amount' %>
-    </div>
-
-     <div class='check_boxes'>
-      <%= form.collection_check_boxes :categories, 
-          current_user.categories.order(:created_at), :id, :name,
-          include_hidden: false,
-          placeholder: 'Expense Categories' 
-      %>
-    </div>
-
-    <div>
-      <%= form.submit 'Create', class: 'login' %>
-    </div>
-  <% end %>
-</div>
