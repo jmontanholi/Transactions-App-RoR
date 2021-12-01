@@ -76,7 +76,7 @@ $grey_color: #434b54;
   }
 
   .total {
-    flex: 1;
+    flex: 1.5;
   }
 
 }
@@ -113,9 +113,22 @@ $grey_color: #434b54;
   }
 
   p {
+    flex: 1.5;
     color: black;
     font-weight: bold;
     margin: 0 1rem 0 0;
+  }
+
+  img {
+    flex: 1;
+    height: 80px;
+    width: 25%;
+    margin-left: 0.5rem;
+  }
+
+  .name {
+    flex: 2;
+    margin: 0 0 2.5rem 1rem;
   }
 }
 

@@ -9,8 +9,9 @@
   <%= render 'layouts/flash'%>
   <section>
     <div class='category_total_div'>
-      <h3><%= @category.name %></h3>
-      <p>Total: <span>$<%= @category.total %></span></p>
+      <img src=<%= url_for(@category.icon) %>>
+      <h3 class='name'><%= @category.name %></h3>
+      <p class='total'>Total: <span>$<%= @category.total %></span></p>
     </div>
   </section>
   <section class='expenses_section'>
