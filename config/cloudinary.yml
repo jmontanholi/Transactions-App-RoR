@@ -1,11 +1,11 @@
 development: 
-  cloud_name: "dds4ezlvp"
-  api_key: "347877727746449"
-  api_secret: "FNRvjEag2PMOjeTSlgvrapjBTxY"
+  cloud_name: "hrwa243my"
+  api_key: "651168515613976"
+  api_secret: "j4ppF_lP4_W4a6H5Ij7S5t3XpUc"
   secure: true
 
 production:
-  cloud_name: "dds4ezlvp"
-  api_key: "347877727746449"
-  api_secret: "FNRvjEag2PMOjeTSlgvrapjBTxY"
+  cloud_name: "hrwa243my"
+  api_key: "651168515613976"
+  api_secret: "j4ppF_lP4_W4a6H5Ij7S5t3XpUc"
   secure:true
