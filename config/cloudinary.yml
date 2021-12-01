@@ -1,0 +1,11 @@
+development: 
+  cloud_name: "dds4ezlvp"
+  api_key: "347877727746449"
+  api_secret: "FNRvjEag2PMOjeTSlgvrapjBTxY"
+  secure: true
+
+production:
+  cloud_name: "dds4ezlvp"
+  api_key: "347877727746449"
+  api_secret: "FNRvjEag2PMOjeTSlgvrapjBTxY"
+  secure:true

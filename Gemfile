@@ -10,6 +10,8 @@ gem 'faker'
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'active_storage_validations'
+gem 'cloudinary'
+gem 'carrierwave'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use postgresql as the database for Active Record
