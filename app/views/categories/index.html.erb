@@ -1,0 +1,26 @@
+<% if can? :read, @categories %>
+  <header>
+    <i class="fas fa-bars"></i>
+    <h2 class='header_title'>CATEGORIES</h2>
+    <i class="fas fa-search"></i>
+  </header>
+  <%= render 'layouts/flash'%>
+  <section class='categories_section'>
+    <div class='categories_major_div'>
+      <% @categories.each do |category|%>
+        <%= link_to "/categories/#{category.id}" do %>
+          <div class='categories_small_div'>
+            <%= cl_image_tag category.icon.key, :crop=>"fill" %>
+            <p class='name'><%= category.name %></p>
+            <p class='total'>Total: <span>$<%= category.total %></span></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class='new_category_div'>
+      <%= link_to '/categories/new' do %>
+        <p>NEW CATEGORY</p>
+      <% end %>
+    </div>
+  </section>
+<% end %>

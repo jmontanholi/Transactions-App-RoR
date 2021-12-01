@@ -1,0 +1,31 @@
+<% if can? :read, @category %>
+  <header>
+    <%= link_to '/user' do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+    <h2 class='header_title'>TRANSACTIONS</h2>
+    <i class="fas fa-search"></i>
+  </header>
+  <%= render 'layouts/flash'%>
+  <section>
+    <div class='category_total_div'>
+      <%= cl_image_tag @category.icon.key, :crop=>"fill" %>
+      <h3 class='name'><%= @category.name %></h3>
+      <p class='total'>Total: <span>$<%= @category.total %></span></p>
+    </div>
+  </section>
+  <section class='expenses_section'>
+    <% @expenses.each do |expense| %>
+      <div class='expense_div'>
+        <p class='name'><%= expense.name.capitalize %></p>
+        <p class='amount'>$<%= expense.amount %></p>
+        <p class='time'><%= expense.created_at %></p>
+      </div>
+    <% end %>
+  </section>
+  <div class='new_category_div'>
+    <%= link_to expenses_new_path(category_id: @category.id) do %>
+      <p>NEW EXPENSE</p>
+    <% end %>
+  </div>
+<% end %>

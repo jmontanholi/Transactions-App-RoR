@@ -1,0 +1,33 @@
+<header>
+  <%= link_to root_path do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+  <h2 class='header_title'>REGISTER</h2>
+  <h3 class='header_title'>Proceed</h3>
+</header>
+<%= render 'layouts/flash'%>
+<div class='form_div'>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.text_field :full_name, placeholder: 'Full Name' %>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password' %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password Confirmation' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'Continue', class: 'login' %>
+    </div>
+  <% end %>
+</div>

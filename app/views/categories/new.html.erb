@@ -1,0 +1,33 @@
+<% if can? :create, Category %>
+  <header>
+    <%= link_to '/user' do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+    <h2 class='header_title'>CREATE CATEGORY</h2>
+    <i class="fas fa-search"></i>
+  </header>
+  <%= render 'layouts/flash'%>
+  <% if @errors %>
+    <div class='errors'>
+      <% @errors.each do |e|%>
+          <p><%= e %></p>
+      <% end %>
+    </div>
+  <% end %>
+  <div class='form_div'>
+    <%= form_with url: '/categories/create', method: :post do |form|%>
+      <div>
+        <%= form.text_field :name, placeholder: 'Category Name' %>
+      </div>
+
+      <div class='upload_div'>
+        <p><%= form.label :icon, 'Category Icon', class: 'upload_label'%>
+        <%= form.file_field :icon, class:'upload_input', accept: 'image/png, image/gif, image/jpeg' %></p>
+      </div>
+
+      <div>
+        <%= form.submit 'Create', class: 'login' %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

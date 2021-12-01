@@ -1,0 +1,34 @@
+<header>
+  <%= link_to root_path do %>
+    <i class="fas fa-arrow-left"></i>
+  <% end %>
+  <h2 class='header_title'>LOGIN</h2>
+  <h3 class='header_title'>Proceed</h3>
+</header>
+<%= render 'layouts/flash'%>
+<div class='form_div'>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'submit', placeholder: 'Email' %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password' %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field remember">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: 'login' %>
+    </div>
+  <% end %>
+</div>
+
+<div class='forget_div'>
+  <%= link_to 'Forgot your password?', '/users/password/new', class:'forget_link' %>
+</div>

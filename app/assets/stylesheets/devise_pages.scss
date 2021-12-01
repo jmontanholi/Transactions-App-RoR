@@ -1,0 +1,77 @@
+$font_logo: 'Caveat', cursive;
+$font_text: 'Outfit', sans-serif;
+$blue_color: #3778c2;
+$green_color: #5fb523;
+$grey_color: #434b54;
+
+header {
+  margin: 0;
+  padding: 1rem;
+  background-color: $blue_color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  i,
+  h3,
+  h2 {
+    margin: 0;
+    font-family: $font_text;
+    color: white;
+    font-weight: 100;
+  }
+
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+.remember input {
+  width: 20px;
+  margin-right: 1rem;
+}
+
+.form_div {
+  border: 1px solid rgb(207, 207, 207);
+  margin: 1rem 0 0 0;
+  padding: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 3rem;
+    border: 1px solid rgb(230, 230, 230);
+    padding: 0;
+    margin: 0;
+    text-indent: 10px;
+  }
+
+  input:focus {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  input::placeholder {
+    color: rgb(214, 214, 214);
+  }
+}
+
+.remember {
+  margin: auto;
+  width: 75%;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forget_div {
+  text-align: center;
+  margin-top: 1rem;
+
+  a {
+    color: rgb(172, 172, 172);
+    text-decoration: none;
+  }
+}
