@@ -64,10 +64,21 @@ $grey_color: #434b54;
   height: 5rem;
 
   img {
+    flex: 1;
     height: 80%;
     width: 20%;
     margin-left: 1rem;
   }
+
+  .name {
+    flex: 2;
+    margin: 0 0 2.5rem 1rem;
+  }
+
+  .total {
+    flex: 1;
+  }
+
 }
 
 .new_category_div {
@@ -105,5 +116,22 @@ $grey_color: #434b54;
     color: black;
     font-weight: bold;
     margin: 0 1rem 0 0;
+  }
+}
+
+.upload_div {
+  display: flex;
+  background-color: white;
+  font-family: $font_text;
+  font-weight: bold;
+  color: rgb(214, 214, 214);
+  .upload_label {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+
+  .upload_input {
+    margin-top: 1rem;
+    border: none;
   }
 }

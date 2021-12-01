@@ -11,7 +11,7 @@
         <%= link_to "/categories/#{category.id}" do %>
           <div class='categories_small_div'>
             <img src=<%= url_for(category.icon) %>>
-            <p><%= category.name %></p>
+            <p class='name'><%= category.name %></p>
             <p class='total'>Total: <span>$<%= category.total %></span></p>
           </div>
         <% end %>

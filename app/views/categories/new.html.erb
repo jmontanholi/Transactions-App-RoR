@@ -20,9 +20,9 @@
         <%= form.text_field :name, placeholder: 'Category Name' %>
       </div>
 
-      <div>
-        <p><%= form.label :icon %>
-        <%= form.file_field :icon, accept: 'image/png, image/gif, image/jpeg' %></p>
+      <div class='upload_div'>
+        <p><%= form.label :icon, 'Category Icon', class: 'upload_label'%>
+        <%= form.file_field :icon, class:'upload_input', accept: 'image/png, image/gif, image/jpeg' %></p>
       </div>
 
       <div>
