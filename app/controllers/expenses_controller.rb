@@ -7,8 +7,7 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @expense = current_user.expenses.new(name: params[:name], amount: params[:amount])
+    @expense = current_user.expenses.new(expense_parameters)
     if @expense.save
       params[:categories].each do |category_id|
         category = Category.find(category_id)
