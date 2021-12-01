@@ -10,7 +10,7 @@
       <% @categories.each do |category|%>
         <%= link_to "/categories/#{category.id}" do %>
           <div class='categories_small_div'>
-            <img src=<%category.icon%> alt='Category Icon'>
+            <img src=<%= url_for(category.icon) %>>
             <p><%= category.name %></p>
             <p class='total'>Total: <span>$<%= category.total %></span></p>
           </div>

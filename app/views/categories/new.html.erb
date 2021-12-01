@@ -21,7 +21,8 @@
       </div>
 
       <div>
-        <%= form.text_field :icon, placeholder: 'Category Icon' %>
+        <p><%= form.label :icon %>
+        <%= form.file_field :icon, accept: 'image/png, image/gif, image/jpeg' %></p>
       </div>
 
       <div>
