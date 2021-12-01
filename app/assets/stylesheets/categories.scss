@@ -28,6 +28,7 @@ $grey_color: #434b54;
 
 .categories_small_div .total {
   margin-right: 1rem;
+  flex: 1.5;
 }
 
 .categories_major_div {
@@ -74,11 +75,6 @@ $grey_color: #434b54;
     flex: 2;
     margin: 0 0 2.5rem 1rem;
   }
-
-  .total {
-    flex: 1.5;
-  }
-
 }
 
 .new_category_div {
@@ -138,6 +134,7 @@ $grey_color: #434b54;
   font-family: $font_text;
   font-weight: bold;
   color: rgb(214, 214, 214);
+
   .upload_label {
     font-size: 1.2rem;
     margin-left: 0.5rem;
