@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @categories = current_user.categories.includes(:expenses)
+    @categories = current_user.categories
   end
 
   def show
@@ -15,8 +15,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @category = current_user.categories.new(name: params[:name], icon: params[:icon])
+    @category = current_user.categories.new(category_params)
     if @category.save
       flash[:notice] = 'Category created successfully'
       redirect_to '/user'

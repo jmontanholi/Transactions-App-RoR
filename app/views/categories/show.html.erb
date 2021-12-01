@@ -9,8 +9,9 @@
   <%= render 'layouts/flash'%>
   <section>
     <div class='category_total_div'>
-      <h3><%= @category.name %></h3>
-      <p>Total: <span>$<%= @category.total %></span></p>
+      <%= cl_image_tag @category.icon.key, :crop=>"fill" %>
+      <h3 class='name'><%= @category.name %></h3>
+      <p class='total'>Total: <span>$<%= @category.total %></span></p>
     </div>
   </section>
   <section class='expenses_section'>
